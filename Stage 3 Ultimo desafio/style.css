@@ -1,0 +1,361 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+:root{
+  font-size: 62.5%; /* div 10*/
+  font-family: 'Mulish', sans-serif;
+
+  /*cores usados na pagina*/
+  --color-darkblue-background: hsl(195, 91%, 25%);
+  --color-light-blue: hsla(195, 46%, 40%, 1);
+  --color-white-icon: hsla(196, 100%, 98%, 1);
+  --color-darkGray-button: rgba(255, 255, 255, 0.20);
+  --color-White-textButton:hsla(0, 0%, 100%, 1);
+  --color-black-letter:hsl(0, 0%, 0%);
+  --color-darkGray-letter: hsl(240, 5%, 7%); 
+  --color-black-title: hsl(240, 6%, 13%);
+}
+
+h1{
+  color: var(--color-black-title);
+}
+
+/* BARRA NAV SUPERIROR*/
+#page{
+  display: grid;
+  grid-template-areas:
+  "header "
+  "main "
+  "aside "
+  "footer ";
+
+  grid-template-rows: max-content 1fr 1fr max-content;
+  
+  height: 100vh;
+  min-width: 43.4rem;
+}
+
+#navbar{
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  min-width: 43.4rem;
+  height: auto;
+
+  background: var(--color-darkblue-background);
+}
+
+#navbar-container{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+
+  padding: 1.2rem 2.8rem;
+  min-width:43.4rem;
+  height: 7.2rem;
+}
+
+#nav-button{
+  display: inline-block
+}
+
+#item-patinha {
+display: fixed;
+
+background: var(--color-white-icon);
+border-radius: 50%;
+padding: 6px;
+overflow: hidden;
+border: none;
+
+
+}
+
+#item-patinha img{
+  display: fixed;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: inherit;
+  
+  cursor: pointer;
+}
+
+#item-patinha:hover{
+  background: rgb(140, 144, 146);
+}
+
+#logo-img{
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+}
+
+#imput-seach{
+  display: flex;
+  width: 113.7rem;
+  align-items: center;
+}
+
+#item-search{
+  display: flex;
+  align-items: center;
+  color: var(--color-White-textButton);
+  
+  padding: 12px 16px 12px 14px;
+
+  width: 100%;
+  height: auto;
+
+  border: none;
+  border-radius: 4px;
+  background: var(--color-darkGray-button)
+}
+
+::placeholder{
+  color: var(--color-White-textButton);
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+
+/* Parte principal*/
+/* DEFINICAO GERAL*/
+main{
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+/*DEFININDO IMG*/
+#main-img {
+  width: 100%;
+  height: auto;
+
+  margin-bottom: 31px;    
+}
+
+#main-img img{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* DEFININDO TITULO E BOTAO*/
+.main-container{
+  padding: 0 26px 22px;
+}
+
+main h1{
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+#title-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.box-title-cat{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 31px;
+}
+
+/*BOTÃO JOINHA*/
+.input-like-checkbox1 input[type="checkbox"]{
+display: flex;
+
+background-color: var(--color-darkblue-background);
+background-image: url(./assets/joinha-cima.svg) ;
+background-repeat: no-repeat;
+background-position: center;
+
+appearance: none;
+-webkit-appearance: nome;
+-moz-appearance: none;
+
+width: 40px;
+height: 40px;
+border-radius: 50%;
+
+}
+
+.input-like-checkbox1 input[type="checkbox"]:checked{
+ 
+  background-color:var(--color-black-letter);
+  background-image: url(./assets/joinha-cima.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-like-checkbox2 input[type="checkbox"]{
+  display: flex;
+  
+  background-color: var(--color-darkblue-background);
+  background-image: url(./assets/joiha-baixo.svg) ;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  appearance: none;
+  -webkit-appearance: nome;
+  -moz-appearance: none;
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  }
+  
+  .input-like-checkbox2 input[type="checkbox"]:checked{
+   
+    background-color:var(--color-black-letter);
+    background-image: url(./assets/joiha-baixo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+.text-body{
+  color: var(--cor-blackolor-darkGray-letter);
+  font-size: 1.6rem;
+  text-align: justify;
+
+  line-height: 160%;
+}
+
+/*LINKS DE ASSUSNTOS EXTRAS */
+
+aside{
+  grid-area: aside;
+
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  max-width: 38.4rem;
+  max-height: 61.5rem;
+  
+ }
+
+aside #aside-title {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  padding: 0px 0px 0px 25px
+}
+
+#container{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  
+  margin: 0 auto;
+  min-width: 43rem;
+
+  padding: 2.2rem 2.6rem;
+
+  gap: 3.2rem 1.6rem;
+}
+
+.position-img{
+  width: 100%;
+  height: auto;
+
+  align-items: center;
+}
+
+.position-text{
+  line-height: 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  width: 215px;
+}
+
+
+#container h1 {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+#container p{
+  font-size: 1.4rem;
+  font-style: normal;  
+}
+
+footer{
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  
+  background: var(--color-darkblue-background);
+
+  margin-top:150px;
+  min-width: 43.4rem;
+  height: auto
+}
+
+footer p{
+  color: #FFF;
+
+  text-align: center;
+  
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 16px;
+}
+
+/*CONVERÇÃO DE TAMANHO DE LAYOUT*/
+
+@media (min-width:770px){
+
+  #page{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+    
+    row-gap: 32px;
+  }
+
+  main{
+    margin: 0 auto;
+    width: 80rem;
+    height: auto;
+  }
+
+  aside #container{
+    margin:0 auto;
+    max-width:384px;
+  }
+
+  footer{
+    margin: 0;
+    padding: 0;
+  }
+}
